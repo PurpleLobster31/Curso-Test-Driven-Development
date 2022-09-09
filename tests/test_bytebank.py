@@ -20,3 +20,13 @@ class TestClass:
         
         assert resultado == esperado #Then
         
+    def test_quando_decrescimo_salario_recebe_100000_deve_retornar_90000(self):
+        entrada_salario = 100000 # Given
+        entrada_nome = 'Paulo Bragança'
+        esperado = 90000
+        
+        funcionarioTeste = Funcionario(entrada_nome, '13/03/2000', entrada_salario)
+        funcionarioTeste.decrescimo_salario() # When
+        resultado = funcionarioTeste.salario
+        
+        assert resultado == esperado # Then
